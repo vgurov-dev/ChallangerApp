@@ -1,11 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6812300-a982-4702-a1b9-1ac438ba20be" name="Changes" comment="" />
+    <list default="true" id="a6812300-a982-4702-a1b9-1ac438ba20be" name="Changes" comment="IDE settings">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/app/api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/app/api/v1/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/app/api/v1/routes_auth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/app/api/v1/routes_challenge.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/app/api/v1/routes_user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/app/core/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/app/core/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/app/core/security.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/app/db/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/app/db/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/app/db/init_db.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/app/db/session.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/app/dependeces.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/app/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/app/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/app/models/challenge.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/app/schemas/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/app/schemas/challenge.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/app/services/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/app/services/user_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/app/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/app/handlers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/app/handlers/challenge.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/app/handlers/start.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/app/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/handlers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-comopose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dockerfile" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {}
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/vgurov-dev/ChallangerApp.git",
+    "accountId": "a8e48b91-0927-4f71-9166-f4e13d4912f8"
+  }
+}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 2
@@ -17,9 +84,44 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "Docker.docker-comopose.yml: Compose Deployment.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "dev",
+    "last_opened_file_path": "/Users/vladislavgurov/Apps/ChallangerApp/bot"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bot" />
+      <recent name="$PROJECT_DIR$/backend" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bot/app" />
+      <recent name="$PROJECT_DIR$/backend/app" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-comopose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-comopose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker-comopose.yml: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -35,6 +137,57 @@
       <option name="presentableId" value="Default" />
       <updated>1759074311471</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial comnit">
+      <option name="closed" value="true" />
+      <created>1759074361741</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1759074361741</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1759074453355</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1759074453355</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Test commit">
+      <option name="closed" value="true" />
+      <created>1759074550802</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1759074550802</updated>
+    </task>
+    <task id="LOCAL-00004" summary="IDE settings">
+      <option name="closed" value="true" />
+      <created>1759074644573</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1759074644573</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial comnit" />
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="Test commit" />
+    <MESSAGE value="IDE settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="IDE settings" />
   </component>
 </project>
