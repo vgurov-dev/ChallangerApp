@@ -1,7 +1,7 @@
 import asyncio
 from aiogram import Bot, Dispatcher
-from config import settings
-from handlers import register_all_handlers
+from app import settings
+from app import register_all_handlers
 import logging
 
 

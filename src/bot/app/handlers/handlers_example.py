@@ -7,7 +7,7 @@ from aiogram import F
 from aiogram.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.filters import Command, CommandStart
 import aiohttp
-from config import settings
+from app import settings
 
 
 # 1. Command handlers

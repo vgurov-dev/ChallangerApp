@@ -4,42 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6812300-a982-4702-a1b9-1ac438ba20be" name="Changes" comment="IDE settings">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/app/api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/app/api/v1/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/app/api/v1/routes_auth.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/app/api/v1/routes_challenge.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/app/api/v1/routes_user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/app/core/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/app/core/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/app/core/security.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/app/db/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/app/db/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/app/db/init_db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/app/db/session.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/app/dependeces.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/app/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/app/models/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/app/models/challenge.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/app/schemas/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/app/schemas/challenge.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/app/services/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/app/services/user_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/app/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/app/handlers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/app/handlers/challenge.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/app/handlers/start.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/app/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/handlers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-comopose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    <list default="true" id="a6812300-a982-4702-a1b9-1ac438ba20be" name="Changes" comment="Base app structure - second day">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/bot/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/app/handlers/handlers_example.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/app/handlers/handlers_example.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,63 +32,84 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {}
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/vgurov-dev/ChallangerApp.git",
-    "accountId": "a8e48b91-0927-4f71-9166-f4e13d4912f8"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {}
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/vgurov-dev/ChallangerApp.git&quot;,
+    &quot;accountId&quot;: &quot;a8e48b91-0927-4f71-9166-f4e13d4912f8&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="33KmoLPRiRXzIo5brJlf32XP7zC" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.docker-comopose.yml: Compose Deployment.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "dev",
-    "last_opened_file_path": "/Users/vladislavgurov/Apps/ChallangerApp/bot"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.docker-comopose.yml.db: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-comopose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/vladislavgurov/Apps/ChallangerApp/bot&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/bot" />
       <recent name="$PROJECT_DIR$/backend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bot" />
+      <recent name="$PROJECT_DIR$/backend" />
       <recent name="$PROJECT_DIR$/bot/app" />
       <recent name="$PROJECT_DIR$/backend/app" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Docker.docker-compose.yml.db: Compose Deployment">
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-comopose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
-          <option name="sourceFilePath" value="docker-comopose.yml" />
+          <option name="commandLineOptions" value="--build" />
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="db" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
         </settings>
       </deployment>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker-comopose.yml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -169,7 +160,23 @@
       <option name="project" value="LOCAL" />
       <updated>1759074644573</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Base app structure - first day">
+      <option name="closed" value="true" />
+      <created>1759086108703</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1759086108703</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Base app structure - second day">
+      <option name="closed" value="true" />
+      <created>1759211887639</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1759211887639</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -188,6 +195,8 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Test commit" />
     <MESSAGE value="IDE settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="IDE settings" />
+    <MESSAGE value="Base app structure - first day" />
+    <MESSAGE value="Base app structure - second day" />
+    <option name="LAST_COMMIT_MESSAGE" value="Base app structure - second day" />
   </component>
 </project>

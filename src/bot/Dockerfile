@@ -12,7 +12,7 @@ RUN pip install --no-cache-dir --upgrade pip \
     && pip install --no-cache-dir -r requirements.txt
 
 # Копируем весь код бота внутрь контейнера
-COPY ./app /bot/app
+COPY app ./app
 
 # Команда запуска бота
 CMD ["python", "app/main.py"]

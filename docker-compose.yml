@@ -13,11 +13,11 @@ services:
       - postgres_data:/var/lib/postgresql/data
 
   backend:
-    build: ./backend
+    build: src/backend
     container_name: challenger-backend
-    restart: always
+    restart: unless-stopped
     env_file:
-      - backend/.env
+      - src/backend/.env
     depends_on:
       - db
     ports:
@@ -25,11 +25,11 @@ services:
     command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 
   bot:
-    build: ./bot
+    build: src/bot
     container_name: challenger-bot
-    restart: always
+    restart: no
     env_file:
-      - bot/.env
+      - src/bot/.env
     depends_on:
       - backend
     volumes:

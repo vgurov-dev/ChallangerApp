@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from app.api.v1 import routes_challenge
-from app.db.init_db import init_db
+from backend.app.api.v1 import routes_challenge
+from backend.app.db.init_db import init_db
 from contextlib import asynccontextmanager
 import logging
 

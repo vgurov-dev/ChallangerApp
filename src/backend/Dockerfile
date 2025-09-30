@@ -12,7 +12,7 @@ RUN pip install --no-cache-dir --upgrade pip \
     && pip install --no-cache-dir -r requirements.txt
 
 # Копируем весь код проекта внутрь контейнера
-COPY ./app ./app
+COPY app ./app
 
 # Экспонируем порт приложения
 EXPOSE 8000
