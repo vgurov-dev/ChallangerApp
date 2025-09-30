@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field, field_validator
-from datetime import date, timedelta
+import datetime
 from typing import List, Optional
 
 
@@ -23,14 +23,14 @@ class ChallengeScoringIndicator(BaseModel):
 class ChallengeDay(BaseModel):
     day_no: int = Field(..., description="Номер дня")
     state: Optional[str] = Field(None, description="Состояние дня (например, активен, завершён)")
-    date: Optional[date] = Field(None, description="Дата дня")
+    date: Optional[datetime.date] = Field(None, description="Дата дня")
     description: Optional[str] = Field(None, description="Описание дня")
 
 
 class Challenge(BaseModel):
     name: str = Field(..., description="Название челленджа")
-    start_date: date = Field(..., description="Дата начала челленджа")
-    end_date: date = Field(..., description="Дата окончания челленджа")
+    start_date: datetime.date = Field(..., description="Дата начала челленджа")
+    end_date: datetime.date = Field(..., description="Дата окончания челленджа")
     description: Optional[str] = Field(None, description="Описание челленджа")
     scoring_indicator: Optional[ChallengeScoringIndicator] = Field(None, description="Основной индикатор оценки челленджа")
     additional_indicators: List[ChallengeScoringIndicator] = Field(default_factory=list, description="Дополнительные индикаторы оценки")
@@ -42,15 +42,15 @@ class Challenge(BaseModel):
         if start:
             if v <= start:
                 raise ValueError("end_date должен быть позже start_date")
-            if v - start > timedelta(days=365):
+            if v - start > datetime.timedelta(days=365):
                 raise ValueError("Разница между start_date и end_date не может быть больше 365 дней")
         return v
 
 
 class ChallengeInput(BaseModel):
     name: str = Field(..., description="Название челленджа")
-    start_date: date = Field(..., description="Дата начала челленджа")
-    end_date: date = Field(..., description="Дата окончания челленджа")
-    description: Optional[str] = Field(None, description="Описание челленджа")
-    scoring_indicator: Optional[ChallengeScoringIndicator] = Field(None,
+    start_date: datetime.date = Field(..., description="Дата начала челленджа")
+    end_date: datetime.date = Field(..., description="Дата окончания челленджа")
+    description: Optional[str] = Field(..., description="Описание челленджа")
+    scoring_indicator: Optional[ChallengeScoringIndicator] = Field(...,
                                                                    description="Основной индикатор оценки челленджа")

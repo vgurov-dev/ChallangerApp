@@ -1,4 +1,4 @@
-from pydantic import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     # Database
@@ -13,10 +13,10 @@ class Settings(BaseSettings):
     BACKEND_URL: str = ""
 
     # Любые дополнительные настройки можно добавить сюда
-    model_config = {
-        "env_file": ".env",
-        "env_file_encoding": "utf-8"
-    }
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        env_file_encoding="utf-8",
+    )
 
 # Создаём единственный объект настроек для всего проекта
 settings = Settings()

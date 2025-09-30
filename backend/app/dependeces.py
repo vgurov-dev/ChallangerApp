@@ -2,9 +2,9 @@ from typing import Generator
 from fastapi import Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
-from backend.app.db.session import SessionLocal
-# from backend.app.core.security import decode_access_token
-# from backend.app.models.user import User
+from app.db.session import SessionLocal
+# from app.core.security import decode_access_token
+# from app.models.user import User
 
 # Функция для получения сессии базы данных
 def get_db() -> Generator[Session, None, None]:

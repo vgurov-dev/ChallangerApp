@@ -1,7 +1,7 @@
 import uuid
 from sqlalchemy import Column, String, Text, Date
 from sqlalchemy.dialects.postgresql import UUID, JSONB
-from backend.app.db.base import Base
+from app.db.base import Base
 
 
 class Challenge(Base):

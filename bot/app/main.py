@@ -1,22 +1,21 @@
 import asyncio
 from aiogram import Bot, Dispatcher
-from aiogram.types import Message
-import aiohttp
-from bot.app.config import settings
+from config import settings
+from handlers import register_all_handlers
+import logging
+
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(name)s: %(message)s"
+)
+logger = logging.getLogger(__name__)
 
 bot = Bot(token=settings.BOT_TOKEN)
 dp = Dispatcher()
 
-@dp.message()
-async def echo(message: Message):
-    async with aiohttp.ClientSession() as session:
-        async with session.post(f"{settings.BACKEND_URL}/api/v1/users/", json={
-            "username": message.from_user.username or "anon",
-            "email": f"{message.from_user.id}@example.com",
-            "password": "default"
-        }) as resp:
-            result = await resp.json()
-    await message.answer(f"User created: {result['username']}")
+# Register all handlers from the example file
+register_all_handlers(dp)
 
 async def main():
     await dp.start_polling(bot)
