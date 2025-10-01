@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends
 
-from app.dependeces import get_db
+from backend.app.dependeces import get_db
 from sqlalchemy.orm import Session
 
-from app.models.challenge import Challenge
-from app.schemas.challenge import ChallengeInput
+from backend.app.models.challenge import Challenge
+from backend.app.schemas.challenge import ChallengeInput
 
 
 router = APIRouter()

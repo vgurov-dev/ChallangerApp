@@ -1,12 +1,12 @@
 import asyncio
 from aiogram import Bot, Dispatcher
-from app import settings
-from app import register_all_handlers
+from bot.app.config import settings
+from bot.app.handlers import register_all_handlers
 import logging
 
 
 logging.basicConfig(
-    level=logging.INFO,
+    level=logging.DEBUG,
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s"
 )
 logger = logging.getLogger(__name__)

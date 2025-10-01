@@ -2,17 +2,17 @@
 FROM python:3.12-slim
 
 # Рабочая директория внутри контейнера
-WORKDIR /bot
+WORKDIR /app/src
 
-# Копируем requirements в рабочую директорию
-COPY requirements.txt .
+# Копируем общий requirements (если есть) или локальный для bot
+COPY requirements.txt /bot/app/requirements.txt
 
 # Устанавливаем зависимости
 RUN pip install --no-cache-dir --upgrade pip \
-    && pip install --no-cache-dir -r requirements.txt
+    && pip install --no-cache-dir -r /bot/app/requirements.txt
 
-# Копируем весь код бота внутрь контейнера
-COPY app ./app
+# Копируем весь src внутрь контейнера
+COPY src/bot .
 
 # Команда запуска бота
-CMD ["python", "app/main.py"]
+CMD ["python", "-m", "bot.app.main"]

@@ -4,12 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6812300-a982-4702-a1b9-1ac438ba20be" name="Changes" comment="Base app structure - second day">
+    <list default="true" id="a6812300-a982-4702-a1b9-1ac438ba20be" name="Changes" comment="Moving to src directory">
+      <change afterPath="$PROJECT_DIR$/src/bot/app/schemas/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bot/app/services/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bot/app/services/backend.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/bot/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/app/handlers/handlers_example.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/app/handlers/handlers_example.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot/app/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/app/api/v1/routes_challenge.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/app/api/v1/routes_challenge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/app/core/security.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/app/core/security.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/app/db/init_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/app/db/init_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/app/db/session.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/app/db/session.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bot/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/bot/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bot/app/handlers/handlers_example.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/bot/app/handlers/handlers_example.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bot/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/bot/app/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,13 +80,14 @@
       <recent name="$PROJECT_DIR$/backend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/bot" />
       <recent name="$PROJECT_DIR$/backend" />
       <recent name="$PROJECT_DIR$/bot/app" />
       <recent name="$PROJECT_DIR$/backend/app" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml.db: Compose Deployment">
+  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
@@ -176,7 +186,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759211887639</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Moving to src directory">
+      <option name="closed" value="true" />
+      <created>1759215886918</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1759215886918</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,6 +215,7 @@
     <MESSAGE value="IDE settings" />
     <MESSAGE value="Base app structure - first day" />
     <MESSAGE value="Base app structure - second day" />
-    <option name="LAST_COMMIT_MESSAGE" value="Base app structure - second day" />
+    <MESSAGE value="Moving to src directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moving to src directory" />
   </component>
 </project>

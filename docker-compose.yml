@@ -13,7 +13,9 @@ services:
       - postgres_data:/var/lib/postgresql/data
 
   backend:
-    build: src/backend
+    build:
+      context: .
+      dockerfile: src/backend/Dockerfile
     container_name: challenger-backend
     restart: unless-stopped
     env_file:
@@ -22,19 +24,24 @@ services:
       - db
     ports:
       - "8000:8000"
-    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    volumes:
+      - ./src/backend:/app/src/backend
+    working_dir: /app/src
+    command: uvicorn backend.app.main:app --host 0.0.0.0 --port 8000 --reload
 
   bot:
-    build: src/bot
+    build:
+      context: .
+      dockerfile: src/bot/Dockerfile
     container_name: challenger-bot
-    restart: no
+    restart: unless-stopped   # меняем на перезапуск при остановке
     env_file:
       - src/bot/.env
     depends_on:
       - backend
     volumes:
-      - ./bot/app:/bot/app
-    command: python app/main.py
+      - ./src/bot:/app/src/bot   # монтируем весь src для отслеживания изменений
+    working_dir: /app/src
 
 volumes:
   postgres_data:
