@@ -17,6 +17,7 @@ dp = Dispatcher()
 # Register all handlers from the example file
 register_all_handlers(dp)
 
+
 async def main():
     await dp.start_polling(bot)
 

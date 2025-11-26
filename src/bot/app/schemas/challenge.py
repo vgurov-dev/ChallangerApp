@@ -22,6 +22,7 @@ class ChallengeScoringIndicator(BaseModel):
 class ChallengeInput(BaseModel):
     name: str = Field(..., description="Название челленджа")
     start_date: datetime.date = Field(..., description="Дата начала челленджа")
+    user_id: str = Field(..., description="Ид пользователя")
     end_date: datetime.date = Field(..., description="Дата окончания челленджа")
     description: Optional[str] = Field(..., description="Описание челленджа")
     scoring_indicator: Optional[ChallengeScoringIndicator] = Field(...,

@@ -37,7 +37,8 @@ Available commands:
         """List all challenges from backend"""
         try:
             async with aiohttp.ClientSession() as session:
-                async with session.get(f"{settings.BACKEND_URL}/api/v1/challenges/") as resp:
+                user = message.from_user
+                async with session.get(f"{settings.BACKEND_URL}/api/v1/challenges?user_id={user.id}") as resp:
                     if resp.status == 200:
                         challenges = await resp.json()
                         if challenges:

@@ -1,3 +1,4 @@
+import uuid
 from pydantic import BaseModel, Field, field_validator
 import datetime
 from typing import List, Optional
@@ -48,9 +49,10 @@ class Challenge(BaseModel):
 
 
 class ChallengeInput(BaseModel):
-    name: str = Field(..., description="Название челленджа")
+    name: str = Field(..., description="Название челленджа", examples=[uuid.uuid4()])
     start_date: datetime.date = Field(..., description="Дата начала челленджа")
+    user_id: str = Field(..., description="Ид пользователя", examples=["123324"])
     end_date: datetime.date = Field(..., description="Дата окончания челленджа")
-    description: Optional[str] = Field(..., description="Описание челленджа")
+    description: Optional[str] = Field(..., description="Описание челленджа", examples=['Long Challenge description'])
     scoring_indicator: Optional[ChallengeScoringIndicator] = Field(...,
                                                                    description="Основной индикатор оценки челленджа")
