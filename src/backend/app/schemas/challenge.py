@@ -1,16 +1,17 @@
 import uuid
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, field_validator, ConfigDict
 import datetime
 from typing import List, Optional
 
 
 class ChallengeRangeModel(BaseModel):
-    min: float = Field(..., description="Минимальное значение диапазона (включительно)")
-    max: float = Field(..., description="Максимальное значение диапазона (исключительно)")
+    min: int = Field(..., description="Минимальное значение диапазона (включительно)")
+    max: int = Field(..., description="Максимальное значение диапазона (исключительно)")
 
     @field_validator("max")
-    def validate_max_greater_than_min(cls, v, values):
-        if "min" in values and v <= values["min"]:
+    def validate_max_greater_than_min(cls, v, obj):
+        min_value = obj.data.get('min')
+        if min_value is not None and v <= min_value:
             raise ValueError("max должно быть больше min")
         return v
 
@@ -49,10 +50,24 @@ class Challenge(BaseModel):
 
 
 class ChallengeInput(BaseModel):
-    name: str = Field(..., description="Название челленджа", examples=[uuid.uuid4()])
+    name: str = Field(..., description="Название челленджа", examples=['Еще один крутой челлендж'])
     start_date: datetime.date = Field(..., description="Дата начала челленджа")
     user_id: str = Field(..., description="Ид пользователя", examples=["123324"])
     end_date: datetime.date = Field(..., description="Дата окончания челленджа")
     description: Optional[str] = Field(..., description="Описание челленджа", examples=['Long Challenge description'])
     scoring_indicator: Optional[ChallengeScoringIndicator] = Field(...,
                                                                    description="Основной индикатор оценки челленджа")
+
+class ChallengeOutRow(BaseModel):
+    name: str = Field(..., description="Название челленджа", examples=['Еще один крутой челлендж'])
+    start_date: datetime.date = Field(..., description="Дата начала челленджа")
+    user_id: str = Field(..., description="Ид пользователя", examples=["123324"])
+    end_date: datetime.date = Field(..., description="Дата окончания челленджа")
+    description: Optional[str] = Field(..., description="Описание челленджа", examples=['Long Challenge description'])
+    scoring_indicator: Optional[ChallengeScoringIndicator] = Field(...,
+                                                                   description="Основной индикатор оценки челленджа")
+    model_config = ConfigDict(from_attributes=True)
+
+
+class ChallengeOut(BaseModel):
+    challenges: List[ChallengeOutRow]

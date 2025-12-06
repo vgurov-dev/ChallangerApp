@@ -7,7 +7,7 @@ import logging
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # Код, который выполняется при старте
-    init_db()
+    await init_db()
     yield
     # Код, который выполняется при завершении (если нужен)
     # Например, закрытие соединений с БД

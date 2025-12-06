@@ -10,7 +10,9 @@ class ChallengeService:
 class ChallengeRepository:
 
     @classmethod
-    def _create_challenge_days(cls, first_date: datetime.date, last_date: datetime.date) -> List[ChallengeDay]:
+    def _create_challenge_days(
+            cls, first_date: datetime.date,
+            last_date: datetime.date) -> List[ChallengeDay]:
         pass
 
     @classmethod
