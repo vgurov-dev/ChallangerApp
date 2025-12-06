@@ -1,11 +1,18 @@
-from app.models.challenge import Challenge
-from app.schemas.challenge import ChallengeDay
+from backend.app.models.challenge import Challenge
+from backend.app.schemas.challenge import ChallengeDay
 from typing import List
 import datetime
 
-def create_challenge(challenge: Challenge) -> Challenge:
-    pass
+class ChallengeService:
+    ...
 
 
-def _create_challenge_days(first_date: datetime.date, last_date: datetime.date) -> List[ChallengeDay]:
-    pass
+class ChallengeRepository:
+
+    @classmethod
+    def _create_challenge_days(cls, first_date: datetime.date, last_date: datetime.date) -> List[ChallengeDay]:
+        pass
+
+    @classmethod
+    def create_challenge(cls, challenge: Challenge) -> Challenge:
+        pass
