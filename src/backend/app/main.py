@@ -22,4 +22,4 @@ logger = logging.getLogger(__name__)
 
 app = FastAPI(title="Challenge App", lifespan=lifespan)
 
-app.include_router(routes_challenge.router, prefix="/api/v1/challenges", tags=["Challenges"])
+app.include_router(routes_challenge.router, prefix="/api/v1/challenge", tags=["Challenges"])

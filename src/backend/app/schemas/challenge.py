@@ -85,3 +85,17 @@ class ChallengeOutRow(BaseModel):
 
 class ChallengeOut(BaseModel):
     challenges: List[ChallengeOutRow]
+
+class ChallengeDraftIn(BaseModel):  # заглушка
+    title: str
+    description: Optional[str]
+
+class DraftListOut(BaseModel):  # заглушка
+    drafts: List[ChallengeOut]
+
+class PublishedListOut(BaseModel):  # заглушка
+    published: List[ChallengeOut]
+
+class DayCommitOut(BaseModel):  # заглушка
+    day_id: int
+    success: bool
