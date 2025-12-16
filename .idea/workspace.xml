@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6812300-a982-4702-a1b9-1ac438ba20be" name="Changes" comment="Moving to src directory">
-      <change afterPath="$PROJECT_DIR$/src/bot/app/schemas/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bot/app/services/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bot/app/services/backend.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/app/api/v1/routes_challenge.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/app/api/v1/routes_challenge.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/app/core/security.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/app/core/security.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/app/db/init_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/app/db/init_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/app/db/session.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/app/db/session.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/backend/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bot/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/src/bot/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bot/app/handlers/handlers_example.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/bot/app/handlers/handlers_example.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bot/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/bot/app/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="a6812300-a982-4702-a1b9-1ac438ba20be" name="Changes" comment="Moving to src directory" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,19 +46,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.docker-comopose.yml.db: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-comopose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/vladislavgurov/Apps/ChallangerApp/bot&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.docker-comopose.yml.db: Compose Deployment.executor": "Run",
+    "Docker.docker-comopose.yml: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "feature/challenge-endpoints",
+    "last_opened_file_path": "/Users/vladislavgurov/Apps/ChallangerApp/bot"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/bot" />
