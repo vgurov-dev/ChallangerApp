@@ -4,12 +4,24 @@ class ChallengeNotFound(Exception):
     """
     pass
 
+
 class ChallengeInvalidStatus(Exception):
     """
     Raised when a challenge status cannot be validated.
     """
     pass
 
+
 class ChallengeStatusAlreadyException(Exception):
+    """
+    Raised when a challenge status cannot be validated.
+    """
+    pass
+
+
+class ChallengeEditNotAllowed(Exception):
+    """
+    Raised when a challenge edit cannot be validated.
+    """
     pass
 
