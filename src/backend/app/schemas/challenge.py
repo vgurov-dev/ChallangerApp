@@ -1,35 +1,10 @@
-import uuid
 from pydantic import BaseModel, Field, field_validator, ConfigDict
 import datetime
 from typing import List, Optional
+from backend.app.models.challenge import ChallengeDay, ChallengeScoringIndicator
 
 
-class ChallengeRangeModel(BaseModel):
-    min: int = Field(..., description="Минимальное значение диапазона (включительно)")
-    max: int = Field(..., description="Максимальное значение диапазона (исключительно)")
-
-    @field_validator("max")
-    def validate_max_greater_than_min(cls, v, obj):
-        min_value = obj.data.get('min')
-        if min_value is not None and v <= min_value:
-            raise ValueError("max должно быть больше min")
-        return v
-
-class ChallengeScoringIndicator(BaseModel):
-    name: str = Field(..., description="Название индикатора оценки")
-    description: Optional[str] = Field(None, description="Описание индикатора")
-    min_value: Optional[float] = Field(None, description="Минимально допустимое значение")
-    range: Optional[ChallengeRangeModel] = Field(None, description="Диапазон значений [min, max)")
-
-
-class ChallengeDay(BaseModel):
-    day_no: int = Field(..., description="Номер дня")
-    state: Optional[str] = Field(None, description="Состояние дня (например, активен, завершён)")
-    date: Optional[datetime.date] = Field(None, description="Дата дня")
-    description: Optional[str] = Field(None, description="Описание дня")
-
-
-class Challenge(BaseModel):
+class ChallengePayload(BaseModel):
     name: str = Field(..., description="Название челленджа")
     start_date: datetime.date = Field(..., description="Дата начала челленджа")
     end_date: datetime.date = Field(..., description="Дата окончания челленджа")
@@ -39,6 +14,7 @@ class Challenge(BaseModel):
     challenge_days: List[ChallengeDay] = Field(default_factory=list, description="Список дней челленджа")
 
     @field_validator("end_date")
+    @classmethod
     def validate_end_date_after_start_date(cls, v, values):
         start = values.get("start_date")
         if start:
