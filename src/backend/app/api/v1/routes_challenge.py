@@ -172,7 +172,7 @@ async def edit_day_endpoint(
     pass
 
 
-@router.post("/{challenge_id}/copy", response_model=ChallengeOut)
+@router.post("/{challenge_id}/accept", response_model=ChallengeOut)
 async def copy_challenge_endpoint(
     challenge_id: int = Path(..., alias="challenge_id"),
     target_user_id: Optional[int] = Body(
@@ -185,7 +185,7 @@ async def copy_challenge_endpoint(
     """
     Copy a challenge for another user.
     - Keeps original owner_id unless specified otherwise.
-    POST /api/v1/challenge/{challenge_id}/copy
+    POST /api/v1/challenge/{challenge_id}/accept
     """
     pass
 

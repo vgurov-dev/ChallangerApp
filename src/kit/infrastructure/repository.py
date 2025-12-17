@@ -7,10 +7,14 @@ class Repository[T](ABC):
     Abstract base class for repositories.
     """
     @abstractmethod
-    def get_bi_id(
+    def get_by_id(
             self,
             id: str | int
     ):
+        raise NotImplementedError
+
+    @abstractmethod
+    def update_by_id(self, id: str | int) -> T:
         raise NotImplementedError
 
     @abstractmethod
