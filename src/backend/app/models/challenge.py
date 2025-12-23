@@ -20,8 +20,14 @@ class ChallengeRangeModel(BaseModel):
     Challenge Range model value object
     ChallengeScoringIndicator -> ChallengeRangeModel
     """
-    min: int = Field(..., description="Минимальное значение диапазона (включительно)")
-    max: int = Field(..., description="Максимальное значение диапазона (исключительно)")
+    min: int = Field(
+        ...,
+        description="Минимальное значение диапазона (включительно)"
+    )
+    max: int = Field(
+        ...,
+        description="Максимальное значение диапазона (исключительно)"
+    )
 
     @field_validator("max")
     def validate_max_greater_than_min(cls, v, obj):
@@ -34,10 +40,22 @@ class ChallengeScoringIndicator(BaseModel):
     """
     Challenge Scoring Indicator value object
     """
-    name: str = Field(..., description="Название индикатора оценки")
-    description: Optional[str] = Field(None, description="Описание индикатора")
-    min_value: Optional[float] = Field(None, description="Минимально допустимое значение")
-    range: Optional[ChallengeRangeModel] = Field(None, description="Диапазон значений [min, max)")
+    name: str = Field(
+        ...,
+        description="Название индикатора оценки"
+    )
+    description: Optional[str] = Field(
+        None,
+        description="Описание индикатора"
+    )
+    min_value: Optional[float] = Field(
+        None,
+        description="Минимально допустимое значение"
+    )
+    range: Optional[ChallengeRangeModel] = Field(
+        ...,
+        description="Диапазон значений [min, max)"
+    )
 
 
 class ChallengeDay(BaseModel):
@@ -45,10 +63,23 @@ class ChallengeDay(BaseModel):
     Challenge day value object
     Challenge.challenge_days -> List[ChallengeDay]
     """
-    day_no: int = Field(..., description="Номер дня")
-    state: Optional[str] = Field(None, description="Состояние дня (например, активен, завершён)")
-    date: Optional[datetime.date] = Field(None, description="Дата дня")
-    description: Optional[str] = Field(None, description="Описание дня")
+    day_no: int = Field(
+        ...,
+        description="Номер дня",
+        ge=1
+    )
+    state: Optional[str] = Field(
+        None,
+        description="Состояние дня (например, активен, завершён)"
+    )
+    date: Optional[datetime.date] = Field(
+        None,
+        description="Дата дня"
+    )
+    description: Optional[str] = Field(
+        None,
+        description="Описание дня"
+    )
 
 
 class ChallengeStatus(Enum):
@@ -114,9 +145,21 @@ class Challenge(Base):
     description: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
     user_id: Mapped[str] = mapped_column(String(20), nullable=False, index=True)
     author_id: Mapped[str] = mapped_column(String(20), nullable=False)
-    status: Mapped[ChallengeStatus] = mapped_column(IntEnumType(ChallengeStatus), nullable=False, default=ChallengeStatus.DRAFT)
-    visibility: Mapped[ChallengeVisibility] = mapped_column(IntEnumType(ChallengeVisibility), nullable=False, default=ChallengeVisibility.PRIVATE)
-    level: Mapped[ChallengeLevel] = mapped_column(IntEnumType(ChallengeLevel), nullable=False, default=ChallengeLevel.LIGHT)
+    status: Mapped[ChallengeStatus] = mapped_column(
+        IntEnumType(ChallengeStatus),
+        nullable=False,
+        default=ChallengeStatus.DRAFT
+    )
+    visibility: Mapped[ChallengeVisibility] = mapped_column(
+        IntEnumType(ChallengeVisibility),
+        nullable=False,
+        default=ChallengeVisibility.PRIVATE
+    )
+    level: Mapped[ChallengeLevel] = mapped_column(
+        IntEnumType(ChallengeLevel),
+        nullable=False,
+        default=ChallengeLevel.LIGHT
+    )
 
     # Основной индикатор и дополнительные индикаторы
     scoring_indicator: Mapped[Optional[Dict[str, Any]]] = mapped_column(JSONB, nullable=True)
@@ -131,8 +174,13 @@ class Challenge(Base):
         lazy="selectin"
     )
 
-    @classmethod
-    def create_draft(self):
+    def create_draft(
+            self,
+            name: str = "Undefinded challenge",
+            description: str = None
+    ):
+        self.name = name
+        self.description = description
         self.status = ChallengeStatus.DRAFT
         self.visibility = ChallengeVisibility.PRIVATE
         self.level = ChallengeLevel.LIGHT
@@ -147,8 +195,9 @@ class Challenge(Base):
                 link =  self.__create_public_link()
                 self.public_links.append(link)
                 self.status = ChallengeStatus.PUBLISHED
+                return None
             case ChallengeStatus.PUBLISHED:
-                raise ChallengeStatusAlreadyException()
+                raise ChallengeStatusAlreadyException("Challenge is already published")
         raise ChallengeInvalidStatus("Challenge status is invalid")
 
     def __create_public_link(self) -> ChallengeRefLink:
