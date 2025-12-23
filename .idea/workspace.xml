@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6812300-a982-4702-a1b9-1ac438ba20be" name="Changes" comment="Moving to src directory" />
+    <list default="true" id="a6812300-a982-4702-a1b9-1ac438ba20be" name="Changes" comment="Added Challege state changing logic">
+      <change afterPath="$PROJECT_DIR$/src/backend/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/backend/tests/unit/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/backend/tests/unit/data/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/backend/tests/unit/data/test_challenge_day_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/backend/tests/unit/data/test_challenge_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/backend/tests/unit/data/test_challenge_range_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/backend/tests/unit/data/test_challenge_scoring_indicator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/backend/tests/unit/service/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/backend/tests/unit/web/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/backend/app/models/challenge.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/backend/app/models/challenge.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,30 +58,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.docker-comopose.yml.db: Compose Deployment.executor": "Run",
-    "Docker.docker-comopose.yml: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "feature/challenge-endpoints",
-    "last_opened_file_path": "/Users/vladislavgurov/Apps/ChallangerApp/bot"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.docker-comopose.yml.db: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-comopose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/challenge-endpoints&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/vladislavgurov/Apps/ChallangerApp/bot&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/bot" />
       <recent name="$PROJECT_DIR$/backend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/backend/tests/unit/data" />
+      <recent name="$PROJECT_DIR$/src/backend/tests/unit" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/bot" />
       <recent name="$PROJECT_DIR$/backend" />
-      <recent name="$PROJECT_DIR$/bot/app" />
-      <recent name="$PROJECT_DIR$/backend/app" />
     </key>
   </component>
   <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
@@ -179,7 +191,39 @@
       <option name="project" value="LOCAL" />
       <updated>1759215886918</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added kit for common usage and repository pattern">
+      <option name="closed" value="true" />
+      <created>1765886890912</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1765886890912</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added Challenge state assigning methods">
+      <option name="closed" value="true" />
+      <created>1765935845414</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1765935845414</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added Enum&lt;-&gt;int transforming in Challenge model">
+      <option name="closed" value="true" />
+      <created>1765937683438</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1765937683438</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added Challege state changing logic">
+      <option name="closed" value="true" />
+      <created>1765969580030</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1765969580030</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -201,6 +245,10 @@
     <MESSAGE value="Base app structure - first day" />
     <MESSAGE value="Base app structure - second day" />
     <MESSAGE value="Moving to src directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moving to src directory" />
+    <MESSAGE value="Added kit for common usage and repository pattern" />
+    <MESSAGE value="Added Challenge state assigning methods" />
+    <MESSAGE value="Added Enum&lt;-&gt;int transforming in Challenge model" />
+    <MESSAGE value="Added Challege state changing logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Challege state changing logic" />
   </component>
 </project>
