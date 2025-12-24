@@ -2,15 +2,14 @@ from backend.app.models.challenge import Challenge
 from backend.app.schemas.challenge import ChallengeDay
 from typing import List
 import datetime
+from kit.infrastructure.repository import SQLAlchemyRepository
 
-class ChallengeRepository:
-
-    @classmethod
-    def _create_challenge_days(
-            cls, first_date: datetime.date,
-            last_date: datetime.date) -> List[ChallengeDay]:
+class ChallengeSQLAlchemyRepository(SQLAlchemyRepository[Challenge]):
+    """
+    Class for Challenges DB interactions
+    """
+    async def get_challenge_by_pub_id(self):
         pass
 
-    @classmethod
-    def create_challenge(cls, challenge: Challenge) -> Challenge:
+    async def get_challenge_by_id(self):
         pass

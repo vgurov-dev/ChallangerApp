@@ -4,7 +4,6 @@ from typing import List
 import datetime
 
 class ChallengeService:
-    ...
-
+    pass
 
 
